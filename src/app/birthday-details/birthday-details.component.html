@@ -1,0 +1,58 @@
+
+<mat-card class="example-card" appearance="outlined">
+  <img class="logo-icon" mat-card src="../../assets/7123025_logo_google_g_icon.svg">
+  <div class="content">
+    <div class="left-text">
+      <p class="sign-in-text">Basic information</p>
+      <p class="sign-in-text2" style="font: 16px roboto; color: #1F1F1F; margin-left: 5%; ">Enter your Birthday and Gender</p>
+    </div>
+    <div class="right-text">
+      <div class="right-text1">
+        <mat-form-field class="date" appearance="outline">
+          <mat-label>Day</mat-label>
+          <input  matInput >
+        </mat-form-field>
+        <mat-form-field class="date" appearance="outline">
+          <mat-label>Month</mat-label>
+          <mat-select class="months" matNativeControl>
+            <mat-option>January</mat-option>
+            <mat-option>January</mat-option>
+            <mat-option>January</mat-option>
+            <mat-option>January</mat-option>
+            <mat-option>January</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="date" appearance="outline">
+          <mat-label>year</mat-label>
+          <input matInput >
+        </mat-form-field>
+      </div>
+      <div class="right-text2">
+        <mat-form-field appearance="outline" style="width: 80%; height: 25px;">
+          <mat-label>Gender</mat-label>
+          <mat-select>
+            <mat-option></mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+    <a mat-flat-button href="https://www.google.com/"
+      style="background: #0b57d0; color: #fff; height: 36px; border-radius: 40px; width: 10%; margin-left: 85%; margin-top: 7%;" target="_blank">Next</a>
+</mat-card>
+<div class="bottom-items">
+  <mat-form-field appearance="outline"  class="language-dropdown">
+    <select matNativeControl required>
+      <option value="English(united kingdom)">English (United Kingdom)</option>
+      <option value="Deutsch">Deutsch</option>
+      <option value="Espanol">Espanol</option>
+      <option value="Francais">Francais</option>
+      <option value="Indonesia">Indonesia</option>
+    </select>
+  </mat-form-field>
+  <div class="bottom-items-right">
+    <a href="#">Help</a>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<mat-card class="example-card" appearance="outlined">
+  <img class="logo-icon" mat-card src="../../assets/7123025_logo_google_g_icon.svg">
+  <div class="content">
+    <div class="left-text">
+      <p class="sign-in-text">Sign in</p>
+      <p class="sign-in-text2" style="font: 16px roboto; color: #1F1F1F; margin-left: 5%; ">Use your Google Account</p>
+    </div>
+    <div class="right-text">
+      <mat-form-field appearance="outline">
+        <mat-label style="font-size: medium; margin: 2%; font-weight: 500;">Email or phone</mat-label>
+        <input matInput style="width: 100%; height: 100%; margin-bottom: -2px;">
+      </mat-form-field>
+      <a href="#" style="margin-top: -7px;">Forgot email?</a>
+      <div class="lower-text">
+        Not your computer? Use Guest mode to sign in privately.
+        <br>
+        <a href="#">Learn more about using Guest mode</a>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 5%; display: flex; align-items: center; justify-content: space-evenly;">
+    <button mat-button color="primary" style="border-radius: 40px;" class="create-btn" [routerLink]="['/register']">Create account</button>
+    <a mat-flat-button href="https://www.google.com/"
+      style="background: #0b57d0; color: #fff; height: 36px; border-radius: 40px; width: 10%;" target="_blank">Next</a>
+  </div>
+</mat-card>
+<div class="bottom-items">
+  <mat-form-field appearance="outline"  class="language-dropdown">
+    <select matNativeControl required>
+      <option value="English(united kingdom)">English (United Kingdom)</option>
+      <option value="volvo">Deutsch</option>
+      <option value="saab">Espanol</option>
+      <option value="mercedes">Francais</option>
+      <option value="audi">Indonesia</option>
+    </select>
+  </mat-form-field>
+  <div class="bottom-items-right">
+    <a href="#">Help</a>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+  </div>
+</div>
