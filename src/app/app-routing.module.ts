@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { BirthdayDetailsComponent } from './birthday-details/birthday-details.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const appRoutes: Routes = [
     { 
@@ -12,7 +13,8 @@ const appRoutes: Routes = [
 
     },
     {path:'login', component:LoginComponent},
-    {path:'birthdayDetails',component:BirthdayDetailsComponent}
+    {path:'birthdayDetails',component:BirthdayDetailsComponent},
+    {path:'',component:DashboardComponent}
 ];
 
 @NgModule({

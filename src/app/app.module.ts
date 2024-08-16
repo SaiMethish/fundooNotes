@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
@@ -14,12 +14,22 @@ import {MatMenuModule} from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
 import { BirthdayDetailsComponent } from './birthday-details/birthday-details.component';
 import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatIconModule} from '@angular/material/icon';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    BirthdayDetailsComponent
+    BirthdayDetailsComponent,
+    DashboardComponent,
+    NavbarComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +41,13 @@ import {MatSelectModule} from '@angular/material/select';
     MatFormFieldModule,
     MatMenuModule,
     AppRoutingModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCheckboxModule,
+    MatIconModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatToolbarModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
