@@ -36,9 +36,9 @@ export class LoginComponent implements OnInit {
         password:this.loginform.get("password")?.value
       }
       this.userservice.login('login',logindata).subscribe({
-        next:(res)=>{
+        next:(res:any)=>{
           console.log(res)
-          res?localStorage.setItem("userdata",JSON.stringify(res)):console.log("object is null");
+          res?localStorage.setItem("user-id",res.id):console.log("object is null");
           this.router.navigate(['/'])
         },
         error:(err)=>{

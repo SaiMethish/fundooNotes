@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotesContainerComponent } from './notes-container/notes-container.component';
 import { ArchiveContainerComponent } from './archive-container/archive-container.component';
 import { TrashContainerComponent } from './trash-container/trash-container.component';
+import { AuthGuard } from './service/auth/auth.guard';
 
 const appRoutes: Routes = [
     { 
@@ -19,6 +20,7 @@ const appRoutes: Routes = [
     {
         path:'',
         component:DashboardComponent,
+        canActivate:[AuthGuard],
         children:[
             {
                 path:'notes',

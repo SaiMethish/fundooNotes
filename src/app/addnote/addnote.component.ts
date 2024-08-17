@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./addnote.component.scss']
 })
 export class AddnoteComponent implements OnInit {
-
+  isExpanded:Boolean=false;
   constructor() { }
 
   ngOnInit(): void {
