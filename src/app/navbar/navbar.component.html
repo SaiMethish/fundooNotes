@@ -1,14 +1,25 @@
-<mat-toolbar class="navbar">
-    <div class="left-menu">
-        <mat-icon>menu</mat-icon>
-        <img class="logo-icon" src="../../assets/google-keep-icon.svg">
-        <span>Keep</span>
-    </div>
-    <mat-form-field class="search-bar" appearance="outline">
-        <mat-icon>search</mat-icon>
-        <input matInput type="search">
-        <button matSuffix mat-icon-button aria-label="Search">
-        </button>
-      </mat-form-field>
+<mat-toolbar class="header">
+  <mat-icon>menu</mat-icon>
+  <span class="keeplogo">
+      <img class="logo" src="../../assets/google-keep-icon.svg">
+      <p style="margin-top: 6%;font-weight: 400;">Keep</p>
+  </span>
+
+  <span class="searchBar">
+      <i class='material-icons'>&#xe8b6;</i>
+      <input class="searchinput" placeholder="search" type="text" id="search" onkeyup="onSearch()" />
+  </span>
+
+  <div class="tools">
+      <mat-icon>refresh</mat-icon>
+      <mat-icon>lists</mat-icon>
+      <mat-icon>settings</mat-icon>
+  </div>
+  <div class="profile">
+      <mat-icon style="margin-top: 3% ;" alt="icon">apps</mat-icon>
+      <div class="profile_pic">
+          <span>User</span>
+  </div>
+  </div>
 
 </mat-toolbar>

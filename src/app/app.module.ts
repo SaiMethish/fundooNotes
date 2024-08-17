@@ -21,6 +21,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { NotesContainerComponent } from './notes-container/notes-container.component';
+import { ArchiveContainerComponent } from './archive-container/archive-container.component';
+import { TrashContainerComponent } from './trash-container/trash-container.component';
+import { NotecardComponent } from './notecard/notecard.component';
+import { AddnoteComponent } from './addnote/addnote.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +34,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     BirthdayDetailsComponent,
     DashboardComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    NotesContainerComponent,
+    ArchiveContainerComponent,
+    TrashContainerComponent,
+    NotecardComponent,
+    AddnoteComponent
   ],
   imports: [
     BrowserModule,

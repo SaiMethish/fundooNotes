@@ -1,15 +1,81 @@
-.navbar{
+mat-toolbar{
+    background-color: white;
+    border-bottom: 0.5px solid rgb(195, 186, 186);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+ 
+.keeplogo{
+    font-size: 30px;
+    color:rgb(139, 138, 138);
+    display: flex;
+    width: 18%;
+ 
+}
+.searchBar{
+    display: flex;
+    padding:5px;
+    background-color: rgb(240, 233, 233);
+    border-radius: 10px;
+    margin-top: 4px;
+    width: 45%;
+ 
+}
+.tools{
+    width: 14%;
+    display: flex;
+    justify-content: space-around;
+}
+.profile{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    justify-content: flex-end;
+ 
+}
+.profile_pic{
+    border: 1px solid grey;
+    width: 90px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 6px;
+    border-radius: 4px;
+    margin-left: 4%;
+}
+.searchinput{
+    background-color: rgb(240, 233, 233);
+    border-color:rgb(240, 233, 233);
+    border: none;
+    outline: none;
+    width:300px;
+    font-size: 20px;
+}
+.material-icons{
+    color:rgb(139, 138, 138);
+    padding: 2px 1px 2px 2px;
+    font-size:30px;
+    margin-top: 4px;
+}
+ 
+img{
+    width: 30px;
+    height: 30px;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    .left-menu{
-        display:flex;
-        flex-direction: row;
-        align-items: center;
-    }
 }
-
-.logo-icon{
-    width: 27%;
-    height: 27%;
+.logo{
+    height: 45px;
+    width: 60px;
+    margin-top: 3%;
+}
+.img1{
+    margin-left: 2%;
+    height: 40px;
+    width: 40px;
 }
