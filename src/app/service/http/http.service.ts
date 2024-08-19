@@ -13,8 +13,8 @@ export class HttpService {
     return this.http.post(this.baseurl+url,data,token&&headersOption)
   }
 
-  GetService(url:any,headersOption:any){
-    return this.http.get(this.baseurl+url,headersOption)
+  GetService(url:any){
+    return this.http.get(this.baseurl+url)
   }
 
   PutService(url:any,data:any,token:Boolean,headersOption:any){

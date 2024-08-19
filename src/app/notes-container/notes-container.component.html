@@ -1,1 +1,7 @@
 <app-addnote></app-addnote>
+
+<div class="notes-container" >
+    <div *ngFor="let i of noteslist" style="margin: 10px;">
+        <app-notecard  [note]="i"></app-notecard>
+    </div>
+</div>
