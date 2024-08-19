@@ -14,7 +14,9 @@ export class NotesContainerComponent implements OnInit {
     this.notesService.getAllNotes('getNotesList').subscribe({
       next:(res:any)=>{
         console.log(res.data.data);
-        this.noteslist=res.data.data;
+        this.noteslist=res.data.data.filter((i:any)=>{
+          return i.isArchived!=true&&i.isDeleted!=true;
+        });
       },
       error:err=>console.log(err),
       complete:()=>{}

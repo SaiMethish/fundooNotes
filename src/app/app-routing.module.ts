@@ -8,6 +8,7 @@ import { NotesContainerComponent } from './notes-container/notes-container.compo
 import { ArchiveContainerComponent } from './archive-container/archive-container.component';
 import { TrashContainerComponent } from './trash-container/trash-container.component';
 import { AuthGuard } from './service/auth/auth.guard';
+import { ReminderComponent } from './reminder/reminder.component';
 
 const appRoutes: Routes = [
     { 
@@ -33,6 +34,10 @@ const appRoutes: Routes = [
             {
                 path:'trash',
                 component:TrashContainerComponent
+            },
+            {
+                path:'reminder',
+                component:ReminderComponent
             }
         ]
     }

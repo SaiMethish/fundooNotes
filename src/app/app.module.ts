@@ -26,6 +26,8 @@ import { ArchiveContainerComponent } from './archive-container/archive-container
 import { TrashContainerComponent } from './trash-container/trash-container.component';
 import { NotecardComponent } from './notecard/notecard.component';
 import { AddnoteComponent } from './addnote/addnote.component';
+import { FormsModule } from '@angular/forms';
+import { ReminderComponent } from './reminder/reminder.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +41,8 @@ import { AddnoteComponent } from './addnote/addnote.component';
     ArchiveContainerComponent,
     TrashContainerComponent,
     NotecardComponent,
-    AddnoteComponent
+    AddnoteComponent,
+    ReminderComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { AddnoteComponent } from './addnote/addnote.component';
     MatIconModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule
 
   ],
   providers: [],
