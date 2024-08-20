@@ -1,11 +1,11 @@
 mat-toolbar{
     background-color: white;
     border-bottom: 0.5px solid rgb(195, 186, 186);
+    position: fixed;
 }
 .header{
     display: flex;
     justify-content: space-between;
-   
 }
 .example-spacer {
     flex: 1 1 auto;

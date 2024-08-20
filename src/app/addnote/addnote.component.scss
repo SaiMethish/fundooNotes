@@ -1,5 +1,5 @@
 .note-input {
-  margin-top: 25px;
+  margin-top: 70px;
   margin-left: 100px;
   display: flex;
   align-items: center;
@@ -28,6 +28,8 @@
 
 
 .note-expanded {
+  position: fixed;
+  z-index: 1;
   margin-top: 25px;
   margin-left: 100px;
   display: flex;

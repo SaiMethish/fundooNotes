@@ -10,11 +10,11 @@ export class HttpService {
   baseurl="https://fundoonotes.incubation.bridgelabz.com/api/";
 
   PostService(url:any,data:any,token:Boolean,headersOption:any){
-    return this.http.post(this.baseurl+url,data,token&&headersOption)
+    return this.http.post(this.baseurl+url,data,token&&headersOption);
   }
 
   GetService(url:any){
-    return this.http.get(this.baseurl+url)
+    return this.http.get(this.baseurl+url);
   }
 
   PutService(url:any,data:any,token:Boolean,headersOption:any){

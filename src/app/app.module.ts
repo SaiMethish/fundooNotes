@@ -28,6 +28,7 @@ import { NotecardComponent } from './notecard/notecard.component';
 import { AddnoteComponent } from './addnote/addnote.component';
 import { FormsModule } from '@angular/forms';
 import { ReminderComponent } from './reminder/reminder.component';
+import { CreateEmailComponent } from './create-email/create-email.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { ReminderComponent } from './reminder/reminder.component';
     TrashContainerComponent,
     NotecardComponent,
     AddnoteComponent,
-    ReminderComponent
+    ReminderComponent,
+    CreateEmailComponent
   ],
   imports: [
     BrowserModule,
