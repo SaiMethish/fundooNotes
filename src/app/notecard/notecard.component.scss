@@ -6,13 +6,27 @@
 }
 
 .card {
+    background-color:whitesmoke;
     border: 1px solid #ccc;
     padding: 16px;
+    display: flex;
+    flex-direction: column;
     margin: 16px;
     border-radius: 8px;
     overflow: hidden;
     word-wrap: break-word;
     width: 100%;
+    height: 70%;
+    .icons{
+        margin-top: 40px;
+        *{
+            margin-left: 4px;
+            margin-right: 4px;
+            color: gray;
+        }
+    }
   }
+
+
   
   
