@@ -1,4 +1,4 @@
-<mat-card class="example-card" appearance="outlined">
+<mat-card class="example-card" appearance="outlined" [formGroup]="userform">
     <img class="logo-icon" mat-card src="../../assets/7123025_logo_google_g_icon.svg">
     <div class="content">
       <div class="left-text">
@@ -7,17 +7,17 @@
       </div>
       <div class="right-text">
         <mat-form-field appearance="outline">
-          <mat-label style="font-size: medium; margin: 2%; font-weight: 500;">First name</mat-label>
-          <input class="firstname" matInput style="width: 100%; height: 100%; margin-bottom: -2px;">
+          <mat-label style="font-size: medium; margin: 2%; font-weight: 500;" >First name</mat-label>
+          <input formControlName="firstname" class="firstname" matInput style="width: 100%; height: 100%; margin-bottom: -2px;">
         </mat-form-field>
         <mat-form-field appearance="outline">
-          <mat-label style="font-size: medium; margin: 2%; font-weight: 500;">Surname (optional)</mat-label>
-          <input class="surname" matInput style="width: 100%; height: 100%; margin-bottom: -2px;">
+          <mat-label style="font-size: medium; margin: 2%; font-weight: 500;"  >Surname (optional)</mat-label>
+          <input formControlName="lastname" class="surname" matInput style="width: 100%; height: 100%; margin-bottom: -2px;">
         </mat-form-field>
       </div>
     </div>
-      <a mat-flat-button href="https://www.google.com/"
-        style="background: #0b57d0; color: #fff; height: 36px; border-radius: 40px; width: 10%; margin-left: 85%; margin-top: 7%;" [routerLink]="['/birthdayDetails']">Next</a>
+      <a mat-flat-button 
+        style="background: #0b57d0; color: #fff; height: 36px; border-radius: 40px; width: 10%; margin-left: 85%; margin-top: 7%;" (click)="submitform()">Next</a>
   </mat-card>
   <div class="bottom-items" >
     <mat-form-field appearance="outline"  class="language-dropdown">

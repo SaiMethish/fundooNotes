@@ -9,12 +9,17 @@ import { ArchiveContainerComponent } from './archive-container/archive-container
 import { TrashContainerComponent } from './trash-container/trash-container.component';
 import { AuthGuard } from './service/auth/auth.guard';
 import { ReminderComponent } from './reminder/reminder.component';
+import { CreateEmailComponent } from './create-email/create-email.component';
 
 const appRoutes: Routes = [
     { 
         path: 'register',
         component: RegisterComponent,
 
+    },
+    {
+        path:'createemail',
+        component:CreateEmailComponent
     },
     {path:'login', component:LoginComponent},
     {path:'birthdayDetails',component:BirthdayDetailsComponent},

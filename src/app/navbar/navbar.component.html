@@ -7,7 +7,7 @@
 
   <span class="searchBar">
       <i class='material-icons'>&#xe8b6;</i>
-      <input class="searchinput" placeholder="search" type="text" id="search" onkeyup="onSearch()" />
+      <input class="searchinput" placeholder="search" type="text" id="search" (change)="Search($event)" />
   </span>
 
   <div class="tools">
@@ -18,7 +18,7 @@
   <div class="profile">
       <mat-icon style="margin-top: 3% ;" alt="icon">apps</mat-icon>
       <div class="profile_pic">
-          <span>User</span>
+          <span (click)="Logout()" >{{username}}</span>
   </div>
   </div>
 

@@ -38,8 +38,9 @@ export class LoginComponent implements OnInit {
       this.userservice.login('login',logindata).subscribe({
         next:(res:any)=>{
           console.log(res)
-          res?localStorage.setItem("user-id",res.id):console.log("object is null");
-          this.router.navigate(['/'])
+          res?localStorage.setItem("access_token",res.id):console.log("object is null");
+          res?localStorage.setItem("user_id",res.userId):console.log("object is null");
+          this.router.navigate(['']);
         },
         error:(err)=>{
           if(err.statusText==="Unauthorized"){

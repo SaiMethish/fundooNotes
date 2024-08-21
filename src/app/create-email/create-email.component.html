@@ -1,0 +1,28 @@
+<mat-card class="example-card" [formGroup]="userform" appearance="outlined">
+    <img class="logo-icon" mat-card src="../../assets/7123025_logo_google_g_icon.svg">
+    <div class="content">
+      <div class="left-text">
+        <p class="sign-in-text">Choose your Gmail address</p>
+        <p class="sign-in-text2" style="font: 16px roboto; color: #1F1F1F; margin-left: 5%; ">Pick a Gmail address or create your own</p>
+      </div>
+      <div class="right-text">
+        <mat-form-field appearance="outline">
+            <mat-label>Create a Gmail address</mat-label>
+            <input formControlName="email" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Create password</mat-label>
+            <input formControlName="password" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Confirm password</mat-label>
+            <input formControlName="confirmpassword" matInput>
+        </mat-form-field>
+        <p style="margin-left: 2%;">you can use letters,numbers and fullstops</p>
+      </div>
+    </div>
+    <div style="margin-top: 5%; display: flex; align-items: center; justify-content: space-evenly;">
+      <a mat-flat-button 
+        style="background: #0b57d0; color: #fff; height: 36px; border-radius: 40px; width: 10%; margin-left: 600px;" (click)="submitForm()" >Next</a>
+    </div>
+  </mat-card>
