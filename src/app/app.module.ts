@@ -29,6 +29,7 @@ import { AddnoteComponent } from './addnote/addnote.component';
 import { FormsModule } from '@angular/forms';
 import { ReminderComponent } from './reminder/reminder.component';
 import { CreateEmailComponent } from './create-email/create-email.component';
+import { SearchPipePipe } from './service/pipes/search-pipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { CreateEmailComponent } from './create-email/create-email.component';
     NotecardComponent,
     AddnoteComponent,
     ReminderComponent,
-    CreateEmailComponent
+    CreateEmailComponent,
+    SearchPipePipe
   ],
   imports: [
     BrowserModule,

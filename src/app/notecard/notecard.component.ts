@@ -14,7 +14,7 @@ export class NotecardComponent implements OnInit {
   }
   updateNotes=(value:string)=>{
     console.log(value);
-    console.log(this.note);
+    this.notesService.addNotes(value,)
   }
 
 }

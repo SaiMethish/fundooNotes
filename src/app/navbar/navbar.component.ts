@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../service/user/user-service.service';
 import { Router } from '@angular/router';
+import { DataService } from '../service/data/data.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,8 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
-  constructor(private userService:UserService, private router:Router) { 
+  searchMessage:string='';
+  constructor(private userService:UserService, private router:Router,private data:DataService) { 
 
   }
   username:String="";
@@ -22,8 +23,8 @@ export class NavbarComponent implements OnInit {
       }
     })
   }
-  Search=($event:any)=>{
-    console.log($event)
+  Search=(newValue:string)=>{
+    this.data.changeMessage(this.searchMessage);
   }
 
   Logout=()=>{

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NotesService } from '../service/notes/notes.service';
+import { DataService } from '../service/data/data.service';
 
 @Component({
   selector: 'app-archive-container',
@@ -8,7 +9,8 @@ import { NotesService } from '../service/notes/notes.service';
 })
 export class ArchiveContainerComponent implements OnInit {
   archiveList:any;
-  constructor(private notesService:NotesService) { }
+  searchMessage:string='';
+  constructor(private notesService:NotesService, private data:DataService) { }
 
   ngOnInit(): void {
     this.notesService.getAllNotes('getNotesList').subscribe({
@@ -21,6 +23,9 @@ export class ArchiveContainerComponent implements OnInit {
       error:err=>console.log(err),
       complete:()=>{}
   });
+  this.data.currentMessage.subscribe((message)=>{
+    this.searchMessage=message;
+  })
 }
 
 }

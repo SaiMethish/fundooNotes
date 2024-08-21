@@ -7,7 +7,7 @@
 
   <span class="searchBar">
       <i class='material-icons'>&#xe8b6;</i>
-      <input class="searchinput" placeholder="search" type="text" id="search" (change)="Search($event)" />
+      <input class="searchinput" placeholder="search" type="text" id="search" [(ngModel)]="searchMessage" (ngModelChange)="Search($event)" />
   </span>
 
   <div class="tools">

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NotesService } from '../service/notes/notes.service';
+import { DataService } from '../service/data/data.service';
 
 @Component({
   selector: 'app-notes-container',
@@ -8,8 +9,9 @@ import { NotesService } from '../service/notes/notes.service';
 })
 export class NotesContainerComponent implements OnInit {
 
-  constructor(private notesService:NotesService) { }
+  constructor(private notesService:NotesService, private data:DataService) { }
   noteslist:any;
+  searchMessage:string='';
   ngOnInit(): void {
     this.notesService.getAllNotes('getNotesList').subscribe({
       next:(res:any)=>{
@@ -20,6 +22,10 @@ export class NotesContainerComponent implements OnInit {
       },
       error:err=>console.log(err),
       complete:()=>{}
+    });
+    this.data.currentMessage.subscribe((message)=>{
+      console.log(message);
+      this.searchMessage=message;
     })
   }
 

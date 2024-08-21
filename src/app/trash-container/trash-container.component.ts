@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NotesService } from '../service/notes/notes.service';
+import { DataService } from '../service/data/data.service';
 
 @Component({
   selector: 'app-trash-container',
@@ -8,8 +9,9 @@ import { NotesService } from '../service/notes/notes.service';
 })
 export class TrashContainerComponent implements OnInit {
 
-  constructor(private notesService:NotesService) { }
+  constructor(private notesService:NotesService, private data:DataService) { }
   trashList:any;
+  searchMessage:string='';
   ngOnInit(): void {
     this.notesService.getAllNotes('getNotesList').subscribe({
       next:(res:any)=>{
@@ -20,6 +22,9 @@ export class TrashContainerComponent implements OnInit {
       },
       error:err=>console.log(err),
       complete:()=>{}
+    })
+    this.data.currentMessage.subscribe((m)=>{
+      this.searchMessage=m;
     })
   }
 
