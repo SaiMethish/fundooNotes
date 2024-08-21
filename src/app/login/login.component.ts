@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
           console.log(res)
           res?localStorage.setItem("access_token",res.id):console.log("object is null");
           res?localStorage.setItem("user_id",res.userId):console.log("object is null");
-          this.router.navigate(['']);
+          this.router.navigate(['/notes']);
         },
         error:(err)=>{
           if(err.statusText==="Unauthorized"){

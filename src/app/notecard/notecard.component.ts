@@ -14,7 +14,26 @@ export class NotecardComponent implements OnInit {
   }
   updateNotes=(value:string)=>{
     console.log(value);
-    this.notesService.addNotes(value,)
-  }
-
+    let data={
+      noteIdList:[this.note.id],
+      isArchived:false,
+      isDeleted:false,
+      isColor:""
+    }
+    let url='';
+    if(value=='archive'){
+      url='archiveNotes';
+      data.isArchived=true;
+    }
+    if(value=='trash'){
+      url='trashNotes';
+      data.isDeleted=true;
+      console.log(this.note);
+    }
+    this.notesService.addNotes(url,data).subscribe({
+      next:res=>console.log(res),
+      error:err=>console.log(err),
+      complete:()=>{}
+    })
+  } 
 }

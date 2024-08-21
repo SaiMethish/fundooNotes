@@ -7,7 +7,7 @@ import { HttpService } from '../http/http.service';
 export class NotesService {
 
   constructor(private httpService:HttpService) { }
-  baseurl='notes/';
+  baseurl='notes';
   access_token=localStorage.getItem("access_token");
 
   getAllNotes=(url:any)=>{
@@ -18,7 +18,4 @@ export class NotesService {
     return this.httpService.PostService(`${this.baseurl}/${url}?access_token=${this.access_token}`,data,false,null);
   }
 
-  updateNotes=(url:any,data:any)=>{
-    return this.httpService.PostService(`${this.baseurl}/${url}?access_token=${this.access_token}`,data,false,null)
-  }
 }

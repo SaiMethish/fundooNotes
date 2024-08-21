@@ -1,6 +1,6 @@
 
 <div class="notes-container"  >
-    <div *ngFor="let i of archiveList|searchPipe:searchMessage" style="margin: 5px; height: 500px;">
+    <div *ngFor="let i of archiveList|searchPipe:searchMessage"  style="margin: 5px; height: auto;">
         <app-notecard  [note]="i"></app-notecard>
     </div>
 </div>
